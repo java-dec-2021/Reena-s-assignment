@@ -1,7 +1,6 @@
 >> Evening Agenda:  Week1- Session1 
-### 4:00 PST-  Office Hour (Meet & Greet)
+### 4:00 PST-  Office Hour (Meet & Greet) - How do you prepare yourself for a good coding day?
 ### 5:00 PST-  Lecture
-### 6:00 PST/ Group activity (Bot- Core assignment)
 >> Housekeeping 
 ## Student Resources
 * Private channel `Java-PT`
