@@ -1,21 +1,23 @@
-public class Hello {
+                     public class Hello {
     public static void main(String[] args) {
        System.out.println("Hello Java People!!"); 
 
     //    Primitive data types
        byte myByte= 12;
        int myInt=672637354;
-
        float myFloat=72536734.672f;
        double mydouble=7634763.6376473647364;
        char myChar='c';
        boolean myBool=true;
-
     //    Non-Primitive data types   
     String firstName="Shane";
+    firstName="Mya";
+    String student="Mya";
+
+    String lastName=new String("Jerry");
     System.out.println(firstName.length());
     welcome();
-    welcome("Adam");
+    welcome("Adam");  
     welcome("Hermine");
     System.out.println(evenOdd(39));
     oneTo255();
@@ -33,7 +35,7 @@ public class Hello {
             
         } else {
             return "Odd";
-            
+            //Looks awsome :) ~Sacha
         }
     }
     public static void oneTo255() {
