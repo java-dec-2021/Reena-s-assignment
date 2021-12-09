@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 public class Day2 {
+    HashMap<String, String> foodies = new HashMap<String, String>();
    public static void main(String[] args) {
 
     int[] numbers=new int[5];

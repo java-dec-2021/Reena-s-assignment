@@ -1,6 +1,5 @@
 {
     "java.project.sourcePaths": [
-        "01-java-fundamentals/01-Java First Program",
-        "01-java-fundamentals/06-puzzling"
+        "02-java-oop/Day4"
     ]
 }
