@@ -14,8 +14,8 @@ public class LanguageService {
 	@Autowired
 	private LanguageRepository langRepo;
 
-//	public StudentService(StudentRepository studentRepo) {
-//		this.studentRepo = studentRepo;
+//	public UserService(UserRepository UserRepo) {
+//		this.UserRepo = UserRepo;
 //	}
 	
 //	Get me all languages 
@@ -33,7 +33,7 @@ public class LanguageService {
 		return this.langRepo.save(myLang);
 	}
 	
-//Delete Student 
+//Delete User 
 	
 	
 	

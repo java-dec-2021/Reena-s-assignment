@@ -1,12 +1,14 @@
-package com.reena.student.services;
+package com.reena.User.services;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.reena.student.models.Project;
+import com.reena.auth.models.Project;
 import com.reena.student.repositories.ProjectRepository;
+
+
 
 @Service
 public class ProjectService {

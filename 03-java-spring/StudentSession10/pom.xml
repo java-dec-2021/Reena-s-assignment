@@ -8,10 +8,10 @@
 		<version>2.6.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.reena.student</groupId>
-	<artifactId>student</artifactId>
+	<groupId>com.reena.User</groupId>
+	<artifactId>User</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>student</name>
+	<name>User</name>
 	<description>Demo project for Spring Boot Office hrs</description>
 	<properties>
 		<java.version>11</java.version>

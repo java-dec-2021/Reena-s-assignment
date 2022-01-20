@@ -21,8 +21,8 @@
 <p><button>Submit</button></p>
 </form> --%>
 <div class="container">
-<h1>New Student</h1>
-<form:form action="/create" method="post" modelAttribute="newStudent">
+<h1>New User</h1>
+<form:form action="/create" method="post" modelAttribute="newUser">
     <p>
         <form:label path="firstName">First Name</form:label>
         <form:input path="firstName" class="form-control"/>
@@ -42,7 +42,7 @@
     <input type="submit" value="Submit"/>
 </form:form>    
 
-<a href="/dashboard">All Students</a>
+<a href="/dashboard">All Users</a>
 </div>
 </body>
 </html>

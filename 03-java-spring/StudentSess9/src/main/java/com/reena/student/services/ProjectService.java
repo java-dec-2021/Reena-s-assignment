@@ -1,13 +1,13 @@
-package com.reena.student.services;
+package com.reena.User.services;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.reena.student.models.Project;
-import com.reena.student.models.Student;
-import com.reena.student.repositories.ProjectRepository;
+import com.reena.User.models.Project;
+import com.reena.User.models.User;
+import com.reena.User.repositories.ProjectRepository;
 
 @Service
 public class ProjectService {
@@ -43,8 +43,8 @@ public class ProjectService {
 
 	// Add Likes
 	/*
-	 * public void AddLikes(Project project, Student student) { List<Student>
-	 * myLikers=project.getLikers(); myLikers.add(student);
+	 * public void AddLikes(Project project, User User) { List<User>
+	 * myLikers=project.getLikers(); myLikers.add(User);
 	 * projectRepo.save(project); }
 	 */
 

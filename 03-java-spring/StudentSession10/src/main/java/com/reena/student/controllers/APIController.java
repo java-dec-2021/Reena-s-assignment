@@ -1,4 +1,4 @@
-package com.reena.student.controllers;
+package com.reena.User.controllers;
 
 import java.util.List;
 
@@ -7,23 +7,23 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.reena.student.models.Student;
-import com.reena.student.services.StudentService;
+import com.reena.User.models.User;
+import com.reena.User.services.UserService;
 
 @RestController
 public class APIController {
 	@Autowired
-	private StudentService studentService;
+	private UserService UserService;
 	
 
-	@GetMapping("/api/students")
-	public List<Student> students() {
-		return this.studentService.getAllStudents();
+	@GetMapping("/api/Users")
+	public List<User> Users() {
+		return this.UserService.getAllUsers();
 	}
 	
 	@PostMapping("/api/create")
-	public Student create(Student myStudent) {
-		return this.studentService.create(myStudent);
+	public User create(User myUser) {
+		return this.UserService.create(myUser);
 	}
 
 }

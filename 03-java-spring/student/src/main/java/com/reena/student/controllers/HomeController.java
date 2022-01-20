@@ -1,4 +1,4 @@
-package com.reena.student.controllers;
+package com.reena.User.controllers;
 
 import java.util.Optional;
 
@@ -30,12 +30,12 @@ public class HomeController {
 	public String welcome(@RequestParam("firstName") String fName,
 			@RequestParam("email") String email,
 			@RequestParam("program") String program,
-			Model studentModel,
+			Model UserModel,
 			HttpSession mySession
 			) {
-		studentModel.addAttribute("firstName",fName);
-		studentModel.addAttribute("email",email);
-		studentModel.addAttribute("program",program);
+		UserModel.addAttribute("firstName",fName);
+		UserModel.addAttribute("email",email);
+		UserModel.addAttribute("program",program);
 		
 		mySession.setAttribute("firstName", fName);
 		return "welcome.jsp";

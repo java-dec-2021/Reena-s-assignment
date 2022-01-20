@@ -1,4 +1,4 @@
-package com.reena.student.models;
+package com.reena.User.models;
 
 import java.util.List;
 
@@ -32,16 +32,16 @@ public class Project {
 	private String description;
 	
 	 @ManyToOne(fetch = FetchType.LAZY)
-	    @JoinColumn(name="student_id")
-	    private Student student;
+	    @JoinColumn(name="User_id")
+	    private User User;
 	 
 	 @ManyToMany(fetch = FetchType.LAZY)
 	 @JoinTable(
 		        name = "likes", 
 		        joinColumns = @JoinColumn(name = "project_id"), 
-		        inverseJoinColumns = @JoinColumn(name = "student_id")
+		        inverseJoinColumns = @JoinColumn(name = "User_id")
 		    )
-	 private List<Student> likers; 
+	 private List<User> likers; 
 	 
 
 	public Long getId() {
@@ -68,19 +68,19 @@ public class Project {
 		this.description = description;
 	}
 
-	public Student getStudent() {
-		return student;
+	public User getUser() {
+		return User;
 	}
 
-	public void setStudent(Student student) {
-		this.student = student;
+	public void setUser(User User) {
+		this.User = User;
 	}
 
-	public List<Student> getLikers() {
+	public List<User> getLikers() {
 		return likers;
 	}
 
-	public void setLikers(List<Student> likers) {
+	public void setLikers(List<User> likers) {
 		this.likers = likers;
 	}
 	 

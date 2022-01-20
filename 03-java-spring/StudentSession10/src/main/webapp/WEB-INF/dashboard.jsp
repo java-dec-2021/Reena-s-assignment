@@ -14,8 +14,8 @@
 </head>
 <body>
 <div class="container">
-<h1>All Students</h1>
- <a href="/">New Student</a>
+<h1>All Users</h1>
+ <a href="/">New User</a>
   <a href="/projects">All Projects</a>
     <a href="/projects/new">New Project</a>
 <table class="table table-dark">
@@ -29,20 +29,20 @@
         </tr>
     </thead>
     <tbody>
-        <c:forEach items="${students}" var="student">
+        <c:forEach items="${Users}" var="User">
         <tr>
-            <td><c:out value="${student.firstName}"/></td>
-            <td><c:out value="${student.lastName}"/></td>
-            <td><c:out value="${student.email}"/></td>
+            <td><c:out value="${User.firstName}"/></td>
+            <td><c:out value="${User.lastName}"/></td>
+            <td><c:out value="${User.email}"/></td>
             <td>
-               <form action="/delete/${student.id}" method="post">
+               <form action="/delete/${User.id}" method="post">
 					    <input type="hidden" name="_method" value="delete">
 					    <input type="submit" value="Delete">
 				</form>
 				</td>
 				<td>
 				
-				 <form action="/login/${student.id}" method="post">
+				 <form action="/login/${User.id}" method="post">
 					    <input type="submit" value="Login">
 				</form>
 				</td>

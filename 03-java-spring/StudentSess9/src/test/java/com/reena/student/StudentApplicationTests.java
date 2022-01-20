@@ -1,10 +1,10 @@
-package com.reena.student;
+package com.reena.User;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class StudentApplicationTests {
+class UserApplicationTests {
 
 	@Test
 	void contextLoads() {

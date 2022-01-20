@@ -1,4 +1,4 @@
-package com.reena.student.models;
+package com.reena.User.models;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -21,8 +21,8 @@ public class Project {
 	private String description;
 	
 	 @ManyToOne(fetch = FetchType.LAZY)
-	  @JoinColumn(name="student_id")
-	 private Student student;
+	  @JoinColumn(name="User_id")
+	 private User User;
 
 	public Long getId() {
 		return id;
@@ -43,11 +43,11 @@ public class Project {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public Student getStudent() {
-		return student;
+	public User getUser() {
+		return User;
 	}
-	public void setStudent(Student student) {
-		this.student = student;
+	public void setUser(User User) {
+		this.User = User;
 	}
 	
 }

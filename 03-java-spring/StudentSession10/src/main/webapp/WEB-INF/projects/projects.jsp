@@ -15,10 +15,10 @@ uri="http://java.sun.com/jsp/jstl/core" %>
   </head>
   <body>
   <div class="container">
-  <h2>Welcome<c:out value="${loggedInStudent.firstName}"/></h2>
+  <h2>Welcome<c:out value="${loggedInUser.firstName}"/></h2>
     <h3>All Projects</h3>
-    <a href="/">New Student</a>
-    <a href="/dashboard">All Students</a>
+    <a href="/">New User</a>
+    <a href="/dashboard">All Users</a>
     <a href="/projects/new">New Project</a>
     <table class="table table-dark">
       <thead>
@@ -40,13 +40,13 @@ uri="http://java.sun.com/jsp/jstl/core" %>
             <c:out value="${project.projectName}"/>
             </a>
             </td>
-            <td><c:out value="${project.student.firstName}"/></td>
+            <td><c:out value="${project.User.firstName}"/></td>
         	<td>
         	<c:out value="${project.likers.size()}"/>
         	</td>
         	<td>
         	<c:choose>
-        	<c:when test="${project.likers.contains(loggedInStudent)}">
+        	<c:when test="${project.likers.contains(loggedInUser)}">
         		<a href="/unLike/${project.id}">UnLike</a>
         	</c:when>
         	<c:otherwise>

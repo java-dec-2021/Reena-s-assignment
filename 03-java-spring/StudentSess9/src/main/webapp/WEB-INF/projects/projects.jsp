@@ -19,7 +19,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
     <p><c:out value="${loogedIn}" /></p>
     <a href="/">Home</a>
     <a href="/projects/new">Create New Project</a>
-    <a href="/dashboard">All Students</a>
+    <a href="/dashboard">All Users</a>
 
     <table class="table table-dark">
       <thead>
@@ -38,8 +38,8 @@ uri="http://java.sun.com/jsp/jstl/core" %>
               /></a>
             </td>
             <td>
-              <c:out value="${project.student.firstName}" />,
-              <c:out value="${project.student.lastName}" />
+              <c:out value="${project.User.firstName}" />,
+              <c:out value="${project.User.lastName}" />
             </td>
           </tr>
         </c:forEach>

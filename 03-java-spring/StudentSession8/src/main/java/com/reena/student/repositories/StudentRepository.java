@@ -1,15 +1,15 @@
-package com.reena.student.repositories;
+package com.reena.User.repositories;
 
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.reena.student.models.Student;
+import com.reena.User.models.User;
 
 @Repository
-public interface StudentRepository extends CrudRepository<Student, Long> {
+public interface UserRepository extends CrudRepository<User, Long> {
 
-//	Get list of students 
-	List<Student> findAll();
+//	Get list of Users 
+	List<User> findAll();
 }

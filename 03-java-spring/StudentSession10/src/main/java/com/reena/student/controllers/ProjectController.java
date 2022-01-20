@@ -1,4 +1,4 @@
-package com.reena.student.controllers;
+package com.reena.User.controllers;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
@@ -14,10 +14,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 
-import com.reena.student.models.Project;
-import com.reena.student.models.Student;
+
 import com.reena.student.services.ProjectService;
-import com.reena.student.services.StudentService;
+import com.reena.student.services.UserService;
 
 
 @Controller
@@ -26,7 +25,7 @@ public class ProjectController {
 	private ProjectService projectService;
 	
 	@Autowired
-	private StudentService studentService;
+	private UserService UserService;
 	
 	
 	
@@ -34,16 +33,16 @@ public class ProjectController {
 	@GetMapping("/projects")
 	public String projects(Model model, HttpSession session) {
 		model.addAttribute("projects",projectService.allProjects());
-		Long id= (Long)session.getAttribute("student_id");
-	    Student student= studentService.findStudent(id);
-	    model.addAttribute("loggedInStudent",student);
+		Long id= (Long)session.getAttribute("User_id");
+	    User User= UserService.findUser(id);
+	    model.addAttribute("loggedInUser",User);
 		return "/projects/projects.jsp";
 	}
 	
 //	Create Project 
 	@GetMapping("/projects/new")
 	public String newProject(@ModelAttribute("newProject") Project project, Model model) {
-		model.addAttribute("allStudents",studentService.getAllStudents());
+		model.addAttribute("allUsers",UserService.getAllUsers());
 		return "/projects/new.jsp";
 	}
 	

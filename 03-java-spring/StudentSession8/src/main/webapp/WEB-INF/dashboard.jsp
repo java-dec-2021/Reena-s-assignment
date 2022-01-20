@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<h1>All Students</h1>
+<h1>All Users</h1>
 <table>
     <thead>
         <tr>
@@ -20,13 +20,13 @@
         </tr>
     </thead>
     <tbody>
-        <c:forEach items="${students}" var="student">
+        <c:forEach items="${Users}" var="User">
         <tr>
-            <td><c:out value="${student.firstName}"/></td>
-            <td><c:out value="${student.lastName}"/></td>
-            <td><c:out value="${student.email}"/></td>
+            <td><c:out value="${User.firstName}"/></td>
+            <td><c:out value="${User.lastName}"/></td>
+            <td><c:out value="${User.email}"/></td>
           	<td>
-		        <form action="/delete/${student.id}" method="post">
+		        <form action="/delete/${User.id}" method="post">
 					    <input type="hidden" name="_method" value="delete">
 					    <input type="submit" value="Delete">
 				</form>
@@ -36,7 +36,7 @@
         </c:forEach>
     </tbody>
 </table>
-<a href="/">New Student</a>
+<a href="/">New User</a>
 
 </body>
 </html>

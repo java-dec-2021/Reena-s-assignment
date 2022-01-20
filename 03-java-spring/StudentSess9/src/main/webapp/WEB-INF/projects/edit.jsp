@@ -30,10 +30,10 @@
 	        <form:errors class="text-danger" path="description"/>
 	        <form:input class="form-control" path="description" value="${editProject.description}"/>
 	    </div>
-	    <form:hidden class="form-control" path="student" value="${editProject.student.id}"/>
+	    <form:hidden class="form-control" path="User" value="${editProject.User.id}"/>
 	    <input type="submit" class="btn btn-primary" value="Submit"/>
 	</form:form>    
-	<a href="/dashboard">All Students</a>
+	<a href="/dashboard">All Users</a>
      <a href="/projects">All Projects</a>
 	
 </div>

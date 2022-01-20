@@ -16,12 +16,12 @@
 <h2>Project Info</h2>
 <h3><c:out value="${project.projectName}"/></h3>
 <h5><c:out value="${project.description}"/></h5>
-Created By:<c:out value="${project.student.firstName}"/>
+Created By:<c:out value="${project.User.firstName}"/>
 
 <p>This project is liked by:</p>
 <ul>
-  <c:forEach items="${project.likers}" var="student">
-  <li>  <c:out value="${student.firstName}"></c:out>    </li>
+  <c:forEach items="${project.likers}" var="User">
+  <li>  <c:out value="${User.firstName}"></c:out>    </li>
  </c:forEach>
 </ul>
 
@@ -36,7 +36,7 @@ Created By:<c:out value="${project.student.firstName}"/>
 	<form action="/projects/edit/${project.id}">
 			   <button class="btn btn-info">Edit</button>	
 	</form>
- 	<a href="/dashboard">All Students</a>
+ 	<a href="/dashboard">All Users</a>
      <a href="/projects">All Projects</a>
  
  </div>

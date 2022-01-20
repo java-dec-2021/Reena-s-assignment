@@ -10,6 +10,6 @@ import com.reena.lang.models.Language;
 @Repository
 public interface LanguageRepository extends CrudRepository<Language, Long> {
 
-//	Get list of students 
+//	Get list of Users 
 	List<Language> findAll();
 }

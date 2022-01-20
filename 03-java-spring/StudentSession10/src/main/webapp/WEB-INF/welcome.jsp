@@ -14,7 +14,7 @@ Name: <c:out value="${firstName}"/>
 email: <c:out value="${email}"/>
 Program: <c:out value="${program}"/>
 
-<a href="/details">Student Details</a>
+<a href="/details">User Details</a>
 
 
 </body>

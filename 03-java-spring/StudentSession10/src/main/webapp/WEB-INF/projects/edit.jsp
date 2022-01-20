@@ -14,7 +14,7 @@
 <body>
 <div class="container">
 	<h1>Update Project</h1>
-	<a href="/dashboard">All Students</a>
+	<a href="/dashboard">All Users</a>
      <a href="/projects">All Projects</a>
 	<form:form action="/projects/update/${editProject.id}" method="put" modelAttribute="editProject">
 	 <%-- <form:hidden path="id" value="${editProject.id}"/>  --%>
@@ -28,7 +28,7 @@
 	        <form:errors class="text-danger" path="description"/>
 	        <form:input class="form-control" path="description" />
 	    </div>
-	    <form:hidden path="student" value="${editProject.student.id}"/> 
+	    <form:hidden path="User" value="${editProject.User.id}"/> 
 	    
 	    <input type="submit" class="btn btn-primary" value="Submit"/>
 	</form:form>    

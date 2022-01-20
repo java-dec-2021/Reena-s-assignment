@@ -1,4 +1,4 @@
-package com.reena.student.models;
+package com.reena.User.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,8 +11,8 @@ import javax.validation.constraints.Size;
 import com.sun.istack.NotNull;
 
 @Entity
-@Table(name="students")
-public class Student {
+@Table(name="Users")
+public class User {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

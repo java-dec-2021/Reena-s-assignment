@@ -18,7 +18,7 @@
 <body>
 <div class="container">
 	<h1>Create New Project</h1>
-	<a href="/dashboard">All Students</a>
+	<a href="/dashboard">All Users</a>
      <a href="/projects">All Projects</a>
 	<form:form action="/projects/create" method="post" modelAttribute="newProject">
 	    <div class="form-group">
@@ -32,11 +32,11 @@
 	        <form:input class="form-control"  path="description"/>
 	    </div>
 	     <div class="form-group">
-	       <form:label path="student">Student Name</form:label>
-		        <form:errors path="student"/>
-		        <form:select class="form-control" path="student">
-		        <c:forEach items="${ allStudents }" var="student">
-		        	<option value="${ student.id }">${ student.firstName }</option>
+	       <form:label path="User">User Name</form:label>
+		        <form:errors path="User"/>
+		        <form:select class="form-control" path="User">
+		        <c:forEach items="${ allUsers }" var="User">
+		        	<option value="${ User.id }">${ User.firstName }</option>
 		        </c:forEach>
 		        </form:select>
 		  </div>

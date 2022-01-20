@@ -20,7 +20,7 @@
 <h5><c:out value="${project.description}"/></h5>
  
  
- Created By:<c:out value="${project.student.firstName}"/>
+ Created By:<c:out value="${project.User.firstName}"/>
  
 <!-- Check if project belongs to user -->
 	<p></p>
@@ -33,7 +33,7 @@
 			   <button class="btn btn-info">Edit</button>	
 	</form>
  	
- 	<a href="/dashboard">All Students</a>
+ 	<a href="/dashboard">All Users</a>
      <a href="/projects">All Projects</a>
  
  </div>

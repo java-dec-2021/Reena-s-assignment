@@ -1,4 +1,4 @@
-package com.reena.student.models;
+package com.reena.User.models;
 
 import java.util.List;
 
@@ -15,8 +15,8 @@ import javax.validation.constraints.Size;
 import com.sun.istack.NotNull;
 
 @Entity
-@Table(name="students")
-public class Student {
+@Table(name="Users")
+public class User {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,7 +34,7 @@ public class Student {
 	@Email(message = "Do you even know what email address look like??")
 	private String email;
 	
-	@OneToMany(mappedBy="student", fetch = FetchType.LAZY)
+	@OneToMany(mappedBy="User", fetch = FetchType.LAZY)
     private List<Project> projects;
 	
 	

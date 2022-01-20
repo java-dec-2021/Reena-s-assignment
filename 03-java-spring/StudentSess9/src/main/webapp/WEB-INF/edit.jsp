@@ -15,27 +15,27 @@
 <body>
 
 <div class="container">
-	<h1>Edit Student - ${editStudent.firstName}</h1>
+	<h1>Edit User - ${editUser.firstName}</h1>
 	<h2><a href="/dash">Dashboard</a></h2>	
-	<form:form action="/update/${editStudent.id}" method="post" modelAttribute="editedStudent">
+	<form:form action="/update/${editUser.id}" method="post" modelAttribute="editedUser">
 	   <input type="hidden" name="_method" value=put>
-	   <c:out value="${editStudent.id}"></c:out>
-	   <%-- <form:input class="form-control" path="id" value="${editStudent.id}"/> --%>
+	   <c:out value="${editUser.id}"></c:out>
+	   <%-- <form:input class="form-control" path="id" value="${editUser.id}"/> --%>
 	    <div class="form-group">
 	        <form:label path="firstName">First Name:</form:label>
 	        <form:errors class="text-danger" path="firstName"/>
-	        <form:input class="form-control" path="firstName" value="${editStudent.firstName}"/>
+	        <form:input class="form-control" path="firstName" value="${editUser.firstName}"/>
 	    </div>
 	    <div class="form-group">
 	        <form:label path="lastName">Last Name:</form:label>
 	        <form:errors class="text-danger" path="lastName"/>
-	         <form:input class="form-control" path="lastName" value="${editStudent.lastName}"/>
+	         <form:input class="form-control" path="lastName" value="${editUser.lastName}"/>
 	    
 	    </div>
 	    <div class="form-group">
 	        <form:label path="email">Email:</form:label>
 	        <form:errors class="text-danger" path="email"/>
-	        <form:input class="form-control" path="email" value="${editStudent.email}"/>
+	        <form:input class="form-control" path="email" value="${editUser.email}"/>
 	    </div>
 	    <input type="submit" class="btn btn-primary" value="Submit"/>
 	</form:form>    

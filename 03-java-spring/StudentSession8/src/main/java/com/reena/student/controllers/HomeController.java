@@ -1,4 +1,4 @@
-package com.reena.student.controllers;
+package com.reena.User.controllers;
 
 import javax.naming.Binding;
 import javax.servlet.http.HttpSession;
@@ -15,43 +15,43 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.reena.student.models.Student;
-import com.reena.student.services.StudentService;
+import com.reena.User.models.User;
+import com.reena.User.services.UserService;
 
 
 @Controller
 public class HomeController {
 	@Autowired
-	private StudentService studentService;
+	private UserService UserService;
 	
 	@GetMapping("/")
-	public String index(@ModelAttribute("newStudent") Student student) {
+	public String index(@ModelAttribute("newUser") User User) {
 		return "index.jsp";
 	}
 	
-//	Create student
+//	Create User
 	@PostMapping("/create")
-	public String create(@Valid @ModelAttribute("newStudent") Student student, BindingResult result) {
+	public String create(@Valid @ModelAttribute("newUser") User User, BindingResult result) {
 		if(result.hasErrors()) {
 			return "index.jsp";
 		}
 		else {
-			 this.studentService.create(student);
+			 this.UserService.create(User);
 			 return "redirect:/dashboard";
 		}
 		
 	}
-//	Get All students 
+//	Get All Users 
 	@GetMapping("/dashboard")
-	public String students(Model model) {
-		model.addAttribute("students",this.studentService.getAllStudents());
+	public String Users(Model model) {
+		model.addAttribute("Users",this.UserService.getAllUsers());
 		return "dashboard.jsp";
 	}
 	
-//	Delete a student 
+//	Delete a User 
 	@DeleteMapping("/delete/{id}")
 	public String delete(@PathVariable("id") Long id) {
-		this.studentService.deleteStudent(id);
+		this.UserService.deleteUser(id);
 		return "redirect:/dashboard";
 		
 		
@@ -61,12 +61,12 @@ public class HomeController {
 	public String welcome(@RequestParam("firstName") String fName,
 			@RequestParam("email") String email,
 			@RequestParam("program") String program,
-			Model studentModel,
+			Model UserModel,
 			HttpSession mySession
 			) {
-		studentModel.addAttribute("firstName",fName);
-		studentModel.addAttribute("email",email);
-		studentModel.addAttribute("program",program);
+		UserModel.addAttribute("firstName",fName);
+		UserModel.addAttribute("email",email);
+		UserModel.addAttribute("program",program);
 		
 		mySession.setAttribute("firstName", fName);
 		return "welcome.jsp";

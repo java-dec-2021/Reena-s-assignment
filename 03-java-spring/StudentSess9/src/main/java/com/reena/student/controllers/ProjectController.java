@@ -1,4 +1,4 @@
-package com.reena.student.controllers;
+package com.reena.User.controllers;
 
 
 import java.util.List;
@@ -17,17 +17,17 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 
-import com.reena.student.models.Project;
-import com.reena.student.models.Student;
-import com.reena.student.services.ProjectService;
-import com.reena.student.services.StudentService;
+import com.reena.User.models.Project;
+import com.reena.User.models.User;
+import com.reena.User.services.ProjectService;
+import com.reena.User.services.UserService;
 
 
 
 @Controller
 public class ProjectController {
 	@Autowired
-	private StudentService sService;
+	private UserService sService;
 	
 	@Autowired
 	private ProjectService pService;
@@ -43,8 +43,8 @@ public class ProjectController {
 //Create a new project 
 	@GetMapping("/projects/new")
 	public String newProject(@ModelAttribute("newProject") Project project, Model model) 	{
-	List<Student> allStudents=this.sService.getAllStudents();
-		model.addAttribute("allStudents",allStudents);
+	List<User> allUsers=this.sService.getAllUsers();
+		model.addAttribute("allUsers",allUsers);
 		return "/projects/new.jsp";
 	}
 	
@@ -70,7 +70,7 @@ public class ProjectController {
 		return "projects/project.jsp"; 
 	}
 	
-  // Delete a student 
+  // Delete a User 
 	@DeleteMapping("project/delete/{id}")
 	public String delete(@PathVariable("id") Long id) {
 		this.pService.deleteProject(id);
@@ -85,7 +85,7 @@ public class ProjectController {
 		  return "/projects/edit.jsp";
 		}
 	  
-	  //Update student Info
+	  //Update User Info
 	  @PutMapping("/projects/update/{id}")
 	  public String update(@Valid @ModelAttribute("editedProject") Project project, BindingResult result,@PathVariable("id") Long id, Model model) {
 		  if(result.hasErrors()) {
@@ -106,9 +106,9 @@ public class ProjectController {
 	/*
 	 * @GetMapping("/projects/like/{id}") public String like(@PathVariable("id")
 	 * Long id, HttpSession mysession) { // How do I like a project? Long
-	 * studentId=(Long)mysession.getAttribute("userId"); Student
-	 * student=sService.findStudent(studentId); Project
-	 * project=pService.findProject(id); pService.AddLikes(project, student); return
+	 * UserId=(Long)mysession.getAttribute("userId"); User
+	 * User=sService.findUser(UserId); Project
+	 * project=pService.findProject(id); pService.AddLikes(project, User); return
 	 * "redirect:/projects"; }
 	 */
 
